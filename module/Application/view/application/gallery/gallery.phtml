@@ -1,0 +1,10 @@
+<?php
+
+displayGallery($this->thumbnails);
+
+function displayGallery($thumbnails,$width=8,$height=3) {
+  foreach ($thumbnails as $thumbnail) {
+    $id = rtrim($thumbnail,'.jpg');
+    echo "<a href='/details/?id=$id'><img class='gallery__thumbnail' src='/img/thumbnails/$thumbnail'></a>";
+  }
+}
